@@ -75,6 +75,7 @@ h1, .label {
 summary {
 	cursor: pointer;
 	color: #666;
+	-webkit-appearance: none;
 }
 
 summary h3 {
