@@ -76,6 +76,7 @@ summary {
 	cursor: pointer;
 	color: #666;
 	-webkit-appearance: none;
+	appearance: none;
 }
 
 summary h3 {
