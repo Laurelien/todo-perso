@@ -1,4 +1,4 @@
-﻿body {-webkit-user-select:none;}
+body {-webkit-user-select:none;}
 
 h1, .label {
 	cursor: pointer;
@@ -76,8 +76,8 @@ summary {
 	cursor: pointer;
 	color: #666;
 	-webkit-appearance: none;
-	appearance: none;
 }
+summary::-webkit-details-marker { display:none; }
 
 summary h3 {
 	display: flex;
