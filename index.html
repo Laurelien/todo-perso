@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="styles/css/bootstrap.css" rel="stylesheet">
+		<link href="styles/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Début Réglages -->
+		<div id="fond" style="display:none;">
+		</div>
+		<button type="button" class="btn btn-default settings" id="btn_reglages" onclick="toggleSettings();" title="Réglages"><i class="glyphicon glyphicon-cog"></i></button>
+		<aside id="reglages" class="col-lg-3 col-sm-4 col-xs-12" style="display:none;">
+			<h2>Réglages</h2>
+			<details id="set_categories">
+				<summary>
+					<h3>Catégories</h3>
+				</summary>
+				<ul class="list-group">
+				</ul>
+			</details>
+			<details id="set_stats">
+				<summary>
+					<h3>Statistiques</h3>
+				</summary>
+				<ul class="list-group">
+				</ul>
+			</details>
+		</aside>
+		<!-- Fin Réglages -->
+		<!-- Début Modale -->
+		<div id="myModal" style="display:none;">
+			<div class="modal-dialog" id="modalContent">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<!-- Entête modale -->
+					<div class="modal-header">
+						<button type="button" class="close" onclick="myModal.style.display='none';">&times;</button>
+						<h3 class="modal-title"></h3>
+					</div>
+					<!-- Corps modale -->
+					<div class="modal-body">
+					</div>
+					<!-- Pied modale -->
+					<div class="modal-footer">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Fin Modale -->
+		<!-- Début PopUp -->
+		<div id="popup" class="modal-content" style="display:none;">
+			<header class="modal-header">
+				<button type="button" class="close" onclick="popup.style.display='none';">&times;</button>
+				<h4 class="modal-title"></h4>
+			</header>
+			<section class="modal-body">
+				<div>
+				</div>
+			</section>
+			<footer class="modal-footer">
+			</footer>
+		</div>
+		<!-- Fin PopUp -->
+		<div class="container">
+			<header class="col-lg-12">
+				<h1 title="Cliquer pour modifier le titre" class="page-header" onclick="editValue(this, 'titre');">Cliquer pour ajouter un titre</h1>
+			</header>
+			<section class="row">
+				<header>
+					<nav class="col-lg-12" id="main_menu">
+						<ul class="nav nav-pills nav-justified">
+							<li><a href="index.html">Tous<span class="badge">0</span></a></li>
+							<li class="addPill" title="Ajouter une catégorie"><a href="#" onclick="newCat(); return false;"><i class="glyphicon glyphicon-plus"></i></a></li>
+						</ul>
+					</nav>
+					<nav class="col-lg-12" id="btn_menu">
+						<button type="button" class="btn btn-primary" onclick="newItem();" id="add_item">Ajouter <i class="glyphicon glyphicon-pencil"></i></button>
+						<button type="button" class="btn btn-danger" onclick="showAlert(this);" id="dump">Tout supprimer <i class="glyphicon glyphicon-trash"></i></button>
+					</nav>
+					<div class="alert alert-danger alert-dismissible modalAlerte" style="display:none;">
+						<button type="button" class="close" onclick="closeAlert()">&times;</button>
+						<strong>Attention !</strong> Êtes-vous sûr de vouloir tout supprimer de manière définitive ? <a href="#" class="alert-link" onclick="dump(); return false">Oui, tout supprimer</a> 
+					</div>
+				</header>
+				<div class="col-lg-12" id="todo">
+				</div>
+			</section>
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>

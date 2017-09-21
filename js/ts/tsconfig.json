@@ -1,0 +1,12 @@
+﻿{
+	"compilerOptions": {
+		"target": "es5",
+		"pretty": true,
+		"outDir": "../", 
+		"module": "es2015",
+		"sourceMap": true
+	},
+	"files": [
+		"main.ts"
+	]
+}
