@@ -4,3 +4,4 @@ Développée en TypeScript et avec le framework CSS Bootsrap, cette application 
 
 L'application permet de créer des listes de choses à faire et des les ranger jusqu'à 10 catégories pouvant être crées par l'utilisateur.
 
+[Testez l'application !](https://laurelien.github.io/todo-perso/index.html)
